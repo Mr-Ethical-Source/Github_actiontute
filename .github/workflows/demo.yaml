@@ -5,10 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
-        run:
-          echo "Clonning Repo"
-          echo "${{toJson(github)}}"
-          git clone https://github.com/${{github.repository}}.git
+        uses: actions/checkout@v4
+        # run:
+        #   echo "Clonning Repo"
+        #   echo "${{toJson(github)}}"
+        #   git clone https://github.com/${{github.repository}}.git
       - name: Install Node 
         uses: actions/setup-node@v4
         with:
