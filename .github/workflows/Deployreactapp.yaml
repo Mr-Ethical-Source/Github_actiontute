@@ -177,8 +177,11 @@ jobs:
 
     environment:
       name: github-pages  # ✅ keep it exactly like this
+      
 
     steps:
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v3
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup GitHub Pages
