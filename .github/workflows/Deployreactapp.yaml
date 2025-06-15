@@ -179,6 +179,8 @@ jobs:
       name: github-pages  # ✅ keep it exactly like this
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v3
       - name: Deploy to GitHub Pages
