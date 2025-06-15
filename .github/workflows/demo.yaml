@@ -59,7 +59,17 @@
 
 name: Hello world
 
-on: [push, workflow_dispatch]
+# on: [push, workflow_dispatch]\
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+    paths-ignore:
+      - '.gitignore/worflows/**'
+      - README.md
+  workflow_dispatch:
 
 jobs:
   test:
