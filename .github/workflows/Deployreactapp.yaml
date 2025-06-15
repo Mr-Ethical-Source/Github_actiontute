@@ -182,10 +182,6 @@ jobs:
     steps:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v3
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v3
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
